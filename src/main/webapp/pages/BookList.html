@@ -1,0 +1,115 @@
+<style type="text/css">
+    #table-2 {
+        border: 1px solid #e3e3e3;
+        background-color: #f2f2f2;
+        width: 100%;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+    #table-2 td, #table-2 th {
+        padding: 5px;
+        color: #333;
+    }
+    #table-2 thead {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        padding: .2em 0 .2em .5em;
+        text-align: left;
+        color: #4B4B4B;
+        background-color: #C8C8C8;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e3e3e3), color-stop(.6,#B3B3B3));
+        background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
+        border-bottom: solid 1px #999;
+    }
+    #table-2 th {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 20px;
+        font-style: normal;
+        font-weight: normal;
+        text-align: left;
+        text-shadow: white 1px 1px 1px;
+    }
+    #table-2 td {
+        line-height: 20px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+    }
+    #table-2 td:hover {
+        background-color: #fff;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body >
+<form action="books">
+    Input book title: <input type="text" name="title" value="" />
+    <input type="submit" value="find" />
+</form>
+<table id="table-2">
+    <thead>
+    <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Publisher</th>
+        <th>Source</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>0-123-1233-0</td>
+        <td>Three Musketeers, The</td>
+        <td>
+            <a href="books?author=Dumas, Alexandre">
+                Dumas, Alexandre
+            </a>
+        </td>
+        <td>15.95</td>
+        <td>
+            <a href="books?publisher=Grosset+%26+Dunlap">
+                Grosset &amp; Dunlap
+            </a>
+        </td>
+        <td>
+            <a href="source?name=Ingram">
+                Ingram
+            </a></td>
+        <td>
+            10
+        </td>
+    </tr>
+    <tr bgcolor="lime">
+        <td>0-125-3344-1</td>
+        <td>Black Tulip, The</td>
+        <td>
+            <a href="books?author=Dumas, Alexandre">
+                Dumas, Alexandre
+            </a>
+        </td>
+        <td>18.95</td>
+        <td>
+            <a href="books?publisher=P.+F.+Collier+%26+So">
+                P. F. Collier &amp; So
+            </a>
+        </td>
+        <td>
+            <a href="source?name=Ingram">
+                Ingram
+            </a></td>
+        <td>
+            3
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>
